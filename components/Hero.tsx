@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative isolate flex min-h-[100svh] items-center justify-center overflow-hidden px-6 text-center"
+            className="relative isolate flex min-h-svh items-center justify-center overflow-hidden px-6 text-center"
         >
             {/* Background photo — swap this src for your real pre-wedding shot */}
             <div className="absolute inset-0 -z-20">
@@ -21,7 +21,7 @@ export default function Hero() {
             </div>
 
             {/* Ink gradient overlay so the text stays legible over any photo */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/70 via-ink/50 to-ink/85" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-b from-ink/70 via-ink/50 to-ink/85" />
 
             <div className="relative">
                 <p className="font-body text-xs uppercase tracking-[0.3em] text-gold-soft">
@@ -36,7 +36,7 @@ export default function Hero() {
                 </p>
 
                 <div className="mt-12">
-                    {/* <CountdownSeal tone="dark" /> */}
+                    <CountdownSeal />
                 </div>
 
                 <a
