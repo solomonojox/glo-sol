@@ -17,15 +17,15 @@ export const timeline = [
         year: "2024",
         title: "We met",
         description:
-            "A mutual friend introduced us at a rooftop dinner in Lagos, and we talked until the staff started stacking chairs.",
-    },
-    {
-        year: "2022",
-        title: "We moved in together",
-        description: "What started as 'just for a few months' quietly became home.",
+            "Our sisters introduces us to each other when she was looking for a job, then we got talking till we became familiar.",
     },
     {
         year: "2025",
+        title: "We met for the first time",
+        description: "It was new year, we met.",
+    },
+    {
+        year: "2026",
         title: "The proposal",
         description: "On a quiet Sunday walk, with absolutely no cameras ready. Femi still regrets that part.",
     },
