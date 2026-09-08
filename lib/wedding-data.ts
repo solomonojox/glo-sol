@@ -1,11 +1,11 @@
 // Central place to edit all wedding content — swap these values for your own.
 export const wedding = {
     coupleNames: { partnerOne: "Glory", partnerTwo: "Solo" },
-    date: "2026-11-14T11:00:00", // ISO string used by the countdown
+    date: "2026-11-14T10:00:00", // ISO string used by the countdown
     displayDate: "Saturday, 14 November 2026",
     venue: {
-        ceremony: "St. Augustine's Chapel, Ikoyi",
-        reception: "The Balmoral Hall, Victoria Island, Lagos",
+        ceremony: "Vluxe Event Center",
+        reception: "Plot 51, Road 3, Phase 4, Beside Pan Raf hospital, Nyanya Abuja",
     },
     hashtag: "#GloryOfSolomon",
     contactEmail: "solomonakpas@gmail.com",
@@ -37,10 +37,10 @@ export const timeline = [
 ];
 
 export const schedule = [
-    { time: "10:30 AM", title: "Guests arrive", description: "Please be seated by 10:45." },
-    { time: "11:00 AM", title: "Ceremony", description: wedding.venue.ceremony },
-    { time: "1:00 PM", title: "Cocktail hour", description: "Drinks and small chops on the terrace." },
-    { time: "3:00 PM", title: "Reception & dinner", description: `${wedding.venue.reception} — speeches, dinner, dancing.` },
+    { time: "09:00 AM", title: "Guests arrive", description: "Please be seated by 09:30." },
+    { time: "10:00 AM", title: "Church Wedding Ceremony", description: wedding.venue.ceremony },
+    { time: "1:00 PM", title: "Light Refreshment", description: "Drinks and small chops on the table." },
+    { time: "3:00 PM", title: "Reception", description: `Speeches, dinner, dancing.` },
 ];
 
 export const attire = {

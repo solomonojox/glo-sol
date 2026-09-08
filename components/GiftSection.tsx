@@ -17,6 +17,14 @@ export default function GiftSection() {
         swiftCode: "FNBOUS33"
     };
 
+    const bankDetails2 = {
+        accountName: "Glory Ene Oklenyi",
+        bankName: "Opay",
+        accountNumber: "8142927276",
+        routingNumber: "021000021",
+        swiftCode: "FNBOUS33"
+    };
+
     const handleCopyAccount = async () => {
         try {
             await navigator.clipboard.writeText(bankDetails.accountNumber);
@@ -27,6 +35,29 @@ export default function GiftSection() {
             // Fallback for older browsers
             const textArea = document.createElement("textarea");
             textArea.value = bankDetails.accountNumber;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand("copy");
+                setShowCopyNotification(true);
+                setTimeout(() => setShowCopyNotification(false), 3000);
+            } catch (e) {
+                console.error("Fallback copy failed:", e);
+            }
+            document.body.removeChild(textArea);
+        }
+    };
+
+    const handleCopyAccount2 = async () => {
+        try {
+            await navigator.clipboard.writeText(bankDetails2.accountNumber);
+            setShowCopyNotification(true);
+            setTimeout(() => setShowCopyNotification(false), 3000);
+        } catch (err) {
+            console.error("Failed to copy:", err);
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = bankDetails2.accountNumber;
             document.body.appendChild(textArea);
             textArea.select();
             try {
@@ -60,7 +91,7 @@ export default function GiftSection() {
 
                     <p className="mx-auto mt-4 max-w-md font-body text-sm leading-relaxed text-ink-soft">
                         Your presence is truly the only gift we need. If you&apos;d still like to bless us, a
-                        contribution toward our honeymoon would mean the world.
+                        contribution would mean the world.
                     </p>
 
                     <button
@@ -158,44 +189,61 @@ export default function GiftSection() {
                             </div>
                         ) : (
                             <div className="space-y-4">
-                                <div className="rounded-xl border border-sage/20 bg-sage/5 p-4">
-                                    <div className="space-y-3">
-                                        <div>
-                                            <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Name</p>
-                                            <p className="font-body text-sm font-medium text-ink">{bankDetails.accountName}</p>
-                                        </div>
-                                        <div>
-                                            <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Bank</p>
-                                            <p className="font-body text-sm font-medium text-ink">{bankDetails.bankName}</p>
-                                        </div>
-                                        <div>
-                                            <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Number</p>
-                                            <p className="font-body text-sm font-medium text-ink">{bankDetails.accountNumber}</p>
-                                        </div>
-                                        {/* <div className="grid grid-cols-2 gap-3">
+                                <div className="space-y-4">
+                                    <div className="rounded-xl border border-sage/20 bg-sage/5 p-4">
+                                        <div className="space-y-3">
                                             <div>
-                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Routing #</p>
-                                                <p className="font-body text-xs text-ink">{bankDetails.routingNumber}</p>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Name</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails.accountName}</p>
                                             </div>
                                             <div>
-                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">SWIFT Code</p>
-                                                <p className="text-xs font-mono text-ink">{bankDetails.swiftCode}</p>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Bank</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails.bankName}</p>
                                             </div>
-                                        </div> */}
+                                            <div>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Number</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails.accountNumber}</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <button
+                                        onClick={handleCopyAccount}
+                                        className="relative flex w-full items-center justify-center gap-2 rounded-xl border-2 border-sage/30 bg-white px-6 py-2 font-body text-sm text-sage transition-all hover:bg-sage/5"
+                                    >
+                                        <span>Copy Account Number</span>
+                                    </button>
                                 </div>
-                                <button
-                                    onClick={handleCopyAccount}
-                                    className="relative flex w-full items-center justify-center gap-2 rounded-xl border-2 border-sage/30 bg-white px-6 py-2 font-body text-sm text-sage transition-all hover:bg-sage/5"
-                                >
-                                    <span>Copy Account Number</span>
-                                </button>
-                                <button
-                                    onClick={() => setSelectedMethod(null)}
-                                    className="w-full text-center font-body text-sm text-ink-soft/60 transition-colors hover:text-ink-soft"
-                                >
-                                    ← Go back
-                                </button>
+
+                                <div className="space-y-4">
+                                    <div className="rounded-xl border border-sage/20 bg-sage/5 p-4">
+                                        <div className="space-y-3">
+                                            <div>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Name</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails2.accountName}</p>
+                                            </div>
+                                            <div>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Bank</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails2.bankName}</p>
+                                            </div>
+                                            <div>
+                                                <p className="font-body text-xs uppercase tracking-wider text-ink-soft/60">Account Number</p>
+                                                <p className="font-body text-sm font-medium text-ink">{bankDetails2.accountNumber}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={handleCopyAccount2}
+                                        className="relative flex w-full items-center justify-center gap-2 rounded-xl border-2 border-sage/30 bg-white px-6 py-2 font-body text-sm text-sage transition-all hover:bg-sage/5"
+                                    >
+                                        <span>Copy Account Number</span>
+                                    </button>
+                                    <button
+                                        onClick={() => setSelectedMethod(null)}
+                                        className="w-full text-center font-body text-sm text-ink-soft/60 transition-colors hover:text-ink-soft"
+                                    >
+                                        ← Go back
+                                    </button>
+                                </div>
                             </div>
                         )}
                     </div>

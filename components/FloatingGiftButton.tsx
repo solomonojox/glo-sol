@@ -22,15 +22,15 @@ export default function FloatingGiftButton() {
     }, []);
 
     return (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
             <div>
             <a
                 href="https://wa.me/2348102809730?text=Hello%20Solomon!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-2 rounded-full bg-green-500 px-3 py-3 font-body text-sm uppercase tracking-wide text-paper shadow-lg shadow-ink/20 transition-all duration-300 hover:bg-green-600 `}
+                className={`flex items-center gap-2 rounded-full bg-green-500 px-2 py-2 font-body text-sm uppercase tracking-wide text-paper shadow-lg shadow-ink/20 transition-all duration-300 hover:bg-green-600 `}
             >
-                <TbBrandWhatsappFilled size={20} />
+                <TbBrandWhatsappFilled size={26} />
             </a>
 
             </div>
