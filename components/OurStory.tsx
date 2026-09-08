@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 export default function OurStory() {
     return (
         <section id="story" className="mx-auto max-w-3xl px-6 py-24">
-            <SectionHeading eyebrow="Our Story" title="How we got here" />
+            <SectionHeading eyebrow="Our Story" title="The Journey Down Here" />
             <ol className="relative mt-16 border-l border-gold/40 pl-8">
                 {timeline.map((item) => (
                     <li key={item.year} className="relative mb-12 last:mb-0">
