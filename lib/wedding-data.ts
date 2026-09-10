@@ -17,7 +17,31 @@ export const timeline = [
         year: "2023",
         title: "We got to know each other",
         description:
-            "Our sisters introduces us to each other when she was looking for a job, then we got talking till we became familiar.",
+            `
+                HOW WE GOT TO KNOW EACH OTHER
+
+                It was March 2023. Our sisters were close friends, and through that friendship, Glory got Solomon’s contact while looking for a job.
+
+                Solomon’s sister thought he could help, and he eventually connected Glory with an organisation that had a vacancy. On the day she was to visit, she called him for the first time.
+
+                Glory: “Hello, good morning sir. Am I speaking with Mr Solomon?”
+
+                Solomon: “Yes, you are. Good morning.”
+
+                Glory: “My name is Glory. Your sister gave me your number concerning the job opportunity.”
+
+                Solomon: “Oh yes. Are you already on your way?”
+
+                And that was it.
+
+                The job did not work out, but Glory kept in touch with Solomon about other opportunities. At the time, it was simply a job search and a willingness to help.
+
+                Then, one day, Solomon went to visit his sister, who lived in the same area as Glory. After speaking only over the phone, they were finally going to meet in person.
+
+                Neither of us knew it then, but that meeting was about to become the beginning of something more.
+
+                What would it be like to finally meet? 
+            `,
     },
     {
         year: "2024",
