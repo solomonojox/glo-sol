@@ -37,7 +37,13 @@ export const timeline = [
     {
         year: "2024",
         title: "We met for the first time",
-        description: ["It was new year, we met.",]
+        description: [
+            `On the 1st of January 2024, the conversation about finally meeting came up. Solomon mentioned that he would be visiting his sister, who lived in the same area as Glory, so they decided to meet at her house. Then came the 2nd of January, the day we finally met.`,
+
+            `After knowing each other only through phone calls, we were finally sitting together, talking face to face. Surprisingly, everything felt natural. There was no awkwardness, the conversation flowed as though we had known each other for much longer.`,
+
+            `It was a simple meeting, unaware that our conversations were about to take a completely different shape. And that was when things started getting a little more interesting.`
+        ]
     },
     {
         year: "2026",
