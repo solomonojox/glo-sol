@@ -140,7 +140,7 @@ export default function GiftSection() {
 
                         {!selectedMethod ? (
                             <div className="space-y-3">
-                                <button
+                                {/* <button
                                     onClick={() => setSelectedMethod("card")}
                                     className="flex w-full items-center gap-4 rounded-xl border-2 border-transparent bg-linear-to-r from-rose-50 to-amber-50 p-4 transition-all hover:border-rose-200 hover:shadow-md"
                                 >
@@ -154,7 +154,7 @@ export default function GiftSection() {
                                     <div className="rounded-full bg-rose-100 px-2 py-0.5 text-xs font-medium text-rose-600">
                                         Popular
                                     </div>
-                                </button>
+                                </button> */}
 
                                 <button
                                     onClick={() => setSelectedMethod("bank")}
@@ -188,7 +188,7 @@ export default function GiftSection() {
                                 </button>
                             </div>
                         ) : (
-                            <div className="space-y-4">
+                            <div className="space-y-4 max-h-[70vh] overflow-y-auto">
                                 <div className="space-y-4">
                                     <div className="rounded-xl border border-sage/20 bg-sage/5 p-4">
                                         <div className="space-y-3">
