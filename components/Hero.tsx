@@ -11,7 +11,7 @@ export default function Hero() {
             {/* Background photo — swap this src for your real pre-wedding shot */}
             <div className="absolute inset-0 -z-20">
                 <Image
-                    src="https://wezoree.com/upload/medialibrary/000photo85/27.jpg"
+                    src="/2_cropped.jpg"
                     alt="Ada and Femi on their pre-wedding shoot"
                     fill
                     priority

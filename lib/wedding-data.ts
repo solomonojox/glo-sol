@@ -83,9 +83,14 @@ export const faqs = [
 ];
 
 export const gallery = [
-    { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2023/03/Nada-Kayode-Prewedding-BellaNaija-Weddings-21-1080x1350.jpg", alt: "Glory and Solo" },
-    { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/01/Anite-Uche-Prewedding-Shoot-BellaNaija-Weddings08.jpg", alt: "Close up portrait of the couple laughing" },
-    { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/01/Anite-Uche-Prewedding-Shoot-BellaNaija-Weddings06-1025x1536.jpg", alt: "Glory and Solo" },
-    { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding27-scaled.jpg", alt: "Glory and Solo" },
-    { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding26-1080x1350.jpg", alt: "Glory and Solo" },
+    // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2023/03/Nada-Kayode-Prewedding-BellaNaija-Weddings-21-1080x1350.jpg", alt: "Glory and Solo" },
+    // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/01/Anite-Uche-Prewedding-Shoot-BellaNaija-Weddings08.jpg", alt: "Close up portrait of the couple laughing" },
+    // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/01/Anite-Uche-Prewedding-Shoot-BellaNaija-Weddings06-1025x1536.jpg", alt: "Glory and Solo" },
+    // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding27-scaled.jpg", alt: "Glory and Solo" },
+    // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding26-1080x1350.jpg", alt: "Glory and Solo" },
+    {src: "/1.jpg", alt: 'image1'},
+    {src: "/2.jpg", alt: 'image2'},
+    {src: "/3.jpg", alt: 'image3'},
+    {src: "/4.jpg", alt: 'image4'},
+    {src: "/5.jpg", alt: 'image5'},
 ];
