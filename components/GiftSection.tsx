@@ -90,7 +90,7 @@ export default function GiftSection() {
                     </h2>
 
                     <p className="mx-auto mt-4 max-w-md font-body text-sm leading-relaxed text-ink-soft">
-                        Your presence is truly the only gift we need. If you&apos;d still like to bless us, a
+                        Your presence is truly the only gift we need. But if you&apos;d still like to bless us, a
                         contribution would mean the world.
                     </p>
 

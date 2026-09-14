@@ -67,7 +67,7 @@ export const timeline = [
         year: "2026",
         title: "We're getting married",
         description: [
-            `Today, with a grateful hearts, we are excited to share that we are getting married! We look forward to this new season, trusting God to lead us as we build our home and our lives together.`,
+            `Today, with a grateful heart, we are excited to share that we are getting married! We look forward to this new season, trusting God to lead us as we build our home and our lives together.`,
 
             `With love and gratitude,`,
             `Glory & Solomon`,
