@@ -2,7 +2,7 @@
 export const wedding = {
     coupleNames: { partnerOne: "Glory", partnerTwo: "Solomon" },
     date: "2026-11-14T10:00:00", // ISO string used by the countdown
-    displayDate: "Saturday, 14 November 2026",
+    displayDate: "Saturday, 14th November 2026",
     venue: {
         ceremony: "Vluxe Event Center",
         reception: "Plot 51, Road 3, Phase 4, Beside Pan Raf hospital, Nyanya Abuja",
