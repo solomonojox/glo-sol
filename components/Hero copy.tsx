@@ -6,19 +6,19 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative isolate flex min-h-dvh items-center justify-center overflow-hidden px-6 text-center"
+            className="relative isolate flex min-h-svh items-center justify-center overflow-hidden px-6 text-center"
         >
             {/* Background photo — swap this src for your real pre-wedding shot */}
-            <div className="absolute inset-0 -z-20 hidden md:block">
+            {/* <div className="absolute inset-0 -z-20 hidden md:block">
                 <Image
-                    src="/hero.png"
+                    src="/2_cropped2.jpg"
                     alt="Ada and Femi on their pre-wedding shoot"
                     fill
                     priority
                     sizes="100vw"
                     className="animate-kenburns object-cover object-center"
                 />
-            </div>
+            </div> */}
 
             <div className="absolute inset-0 -z-20 md:hidden">
                 <Image
@@ -38,7 +38,7 @@ export default function Hero() {
                 <p className="font-body text-xs uppercase tracking-[0.3em] text-gold-soft">
                     Together with our families
                 </p>
-                <h1 className="mt-6 md:mt-0 font-display text-5xl italic text-paper sm:text-7xl">
+                <h1 className="mt-6 font-display text-5xl italic text-paper sm:text-7xl">
                     {wedding.coupleNames.partnerOne} <span className="not-italic text-gold">&</span>{" "}
                     {wedding.coupleNames.partnerTwo}
                 </h1>
@@ -46,13 +46,13 @@ export default function Hero() {
                     {wedding.displayDate} · Abuja
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-12">
                     <CountdownSeal />
                 </div>
 
                 <a
                     href="#story"
-                    className="mt-8 inline-flex flex-col items-center gap-2 text-paper/70 transition-colors hover:text-gold-soft"
+                    className="mt-16 inline-flex flex-col items-center gap-2 text-paper/70 transition-colors hover:text-gold-soft"
                 >
                     <span className="font-body text-[10px] uppercase tracking-[0.3em]">Our story</span>
                     <span className="h-8 w-px animate-pulse bg-current" />

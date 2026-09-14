@@ -27,13 +27,13 @@ export default function CountdownSeal() {
 
     return (
         <div className="flex flex-col items-center gap-4">
-            <div className="relative flex h-40 w-40 items-center justify-center rounded-full border-2 border-gold/70 sm:h-48 sm:w-48">
+            <div className="relative flex h-40 w-40 items-center justify-center rounded-full border-2 border-gold/70 sm:h-30 sm:w-30">
                 <div className="absolute inset-2 rounded-full border border-gold/40" />
                 <div className="flex flex-col items-center">
-                    <span className="font-display text-4xl font-semibold text-ink- text-amber-50 sm:text-5xl">
+                    <span className="font-display text-4xl font-semibold text-ink- text-amber-50 sm:text-4xl">
                         {time ? time.days : "--"}
                     </span>
-                    <span className="mt-1 text-[11px] uppercase tracking-[0.25em] text-ink-soft- text-amber-100">days to go</span>
+                    <span className="mt-1 text-[11px] md:text-[9px] uppercase tracking-[0.25em] text-ink-soft- text-amber-100">days to go</span>
                 </div>
             </div>
             {time && (
