@@ -11,7 +11,7 @@ export default function Hero() {
             {/* Background photo — swap this src for your real pre-wedding shot */}
             <div className="absolute inset-0 -z-20 hidden md:block">
                 <Image
-                    src="/hero.png"
+                    src="/hero2.jpg"
                     alt="Ada and Femi on their pre-wedding shoot"
                     fill
                     priority
