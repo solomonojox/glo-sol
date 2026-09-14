@@ -46,12 +46,36 @@ export const timeline = [
     {
         year: "2026",
         title: "The proposal",
-        description: ["On a quiet Sunday walk, with absolutely no cameras ready. Femi still regrets that part.",]
+        description: [
+            `It was a rainy Sunday evening, in a quiet and serene setting filled with soft music, beautiful lights, simple decorations and a few close friends. Then came the moment we would never forget. Solomon asked the question that would change our story forever.`,
+
+            `With joy in our hearts, the answer was YES. It was our decision to choose each other and step into the future together.`,
+
+            `And now, we were getting married.`
+        ]
+    },
+    {
+        year: "2026",
+        title: "OUR COURTSHIP",
+        description: [
+            // `After we met, our conversations slowly began to change. We were no longer just two people who happened to know each other through a job search. We were becoming more intentional about getting to know each other.`,
+            `Our courtship was not about rushing to get to the next stage. It was a season of learning each other, understanding each other and discovering what it meant to build something with God at the centre.`,
+            `And as time went on, we became more certain about what we were building. The plans became clearer, and the future began to feel less like a question and more like something we were preparing for.`
+        ]
     },
     {
         year: "2026",
         title: "We're getting married",
-        description: ["And we'd love for you to be there.",]
+        description: [
+            `Today, with a grateful hearts, we are excited to share that we are getting married! We look forward to this new season, trusting God to lead us as we build our home and our lives together.`,
+
+            `With love and gratitude,`,
+            `Glory & Solomon`,
+            `The Glory of Solomon - 2026`,
+
+            `“He hath made every thing beautiful in his time.”`,
+            `Ecclesiastes 3:11`
+        ]
     },
 ];
 
@@ -86,9 +110,9 @@ export const gallery = [
     // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/01/Anite-Uche-Prewedding-Shoot-BellaNaija-Weddings06-1025x1536.jpg", alt: "Glory and Solo" },
     // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding27-scaled.jpg", alt: "Glory and Solo" },
     // { src: "https://www.bellanaijaweddings.com/wp-content/uploads/2024/09/Kristen-Darlington-Prewedding-Shoot-BellaNaija-Wedding26-1080x1350.jpg", alt: "Glory and Solo" },
-    {src: "/1.jpg", alt: 'image1'},
-    {src: "/2.jpg", alt: 'image2'},
-    {src: "/3.jpg", alt: 'image3'},
-    {src: "/4.jpg", alt: 'image4'},
-    {src: "/5.jpg", alt: 'image5'},
+    { src: "/1.jpg", alt: 'image1' },
+    { src: "/2.jpg", alt: 'image2' },
+    { src: "/3.jpg", alt: 'image3' },
+    { src: "/4.jpg", alt: 'image4' },
+    { src: "/5.jpg", alt: 'image5' },
 ];
