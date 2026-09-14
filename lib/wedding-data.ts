@@ -80,7 +80,7 @@ export const timeline = [
 ];
 
 export const schedule = [
-    { time: "09:00 AM", title: "Guests arrive", description: "Please be seated by 09:30." },
+    { time: "09:00 AM", title: "Guest's arrival", description: "Please be seated by 09:30." },
     { time: "10:00 AM", title: "Church Wedding Ceremony", description: wedding.venue.ceremony },
     { time: "1:00 PM", title: "Light Refreshment", description: "Drinks and small chops on the table." },
     { time: "3:00 PM", title: "Reception", description: `Speeches, dinner, dancing.` },
@@ -89,7 +89,7 @@ export const schedule = [
 export const attire = {
     formality: "Semi-formal · Traditional attire",
     notes:
-        "We'd love to see our colours out there with us.",
+        "We'd love to see you dressed beautifully in our colours.",
     palette: [
         { name: "Wine", hex: "#8a101e" },
         { name: "Caramel brown", hex: "#C68965" },
