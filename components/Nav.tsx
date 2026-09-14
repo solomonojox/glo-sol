@@ -25,7 +25,7 @@ export default function Nav() {
             className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${scrolled ? "bg-paper/90 shadow-sm backdrop-blur" : "bg-transparent"
                 }`}
         >
-            <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-4 px-4 py-5 sm:gap-8">
+            <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-4 px-2 py-5 sm:gap-8">
                 {links.map((link) => (
                     <a
 
