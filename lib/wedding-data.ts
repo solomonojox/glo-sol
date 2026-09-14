@@ -51,7 +51,7 @@ export const timeline = [
 
             `With joy in our hearts, the answer was YES. It was our decision to choose each other and step into the future together.`,
 
-            `And now, we were getting married.`
+            `And now, we are getting married.`
         ]
     },
     {
