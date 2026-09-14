@@ -8,7 +8,7 @@ export default function Footer() {
             </p>
             <p className="mt-2 font-body text-xs uppercase tracking-[0.2em] text-ink-soft">{wedding.hashtag}</p>
             <p className="mt-6 font-body text-xs text-ink-soft/70">
-                Questions? Reach us at {wedding.contactEmail}
+                Questions? You can reach out to us at {wedding.contactEmail}
             </p>
         </footer>
     );

@@ -7,7 +7,7 @@ export const wedding = {
         ceremony: "Vluxe Event Center",
         reception: "Plot 51, Road 3, Phase 4, Beside Pan Raf hospital, Nyanya Abuja",
     },
-    hashtag: "#GloryOfSolomon",
+    hashtag: "#TheGloryOfSolomon",
     contactEmail: "solomonakpas@gmail.com",
     giftLink: "https://your-payment-link.example.com", // Paystack/Flutterwave/PayPal link
 };
