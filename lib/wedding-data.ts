@@ -1,6 +1,6 @@
 // Central place to edit all wedding content — swap these values for your own.
 export const wedding = {
-    coupleNames: { partnerOne: "Glory", partnerTwo: "Solo" },
+    coupleNames: { partnerOne: "Glory", partnerTwo: "Solomon" },
     date: "2026-11-14T10:00:00", // ISO string used by the countdown
     displayDate: "Saturday, 14 November 2026",
     venue: {
@@ -18,8 +18,6 @@ export const timeline = [
         title: "We got to know each other",
         description:
             [
-                `HOW WE GOT TO KNOW EACH OTHER`,
-
                 `It was March 2023. Our sisters were close friends, and through that friendship, Glory got Solomon’s contact while looking for a job. Solomon eventually connected Glory with an organisation that had a vacancy. On the day she was to visit, she called him for the first time.`,
 
                 `Glory: “Hello, good morning sir. Am I speaking with Mr Solomon?”`,
