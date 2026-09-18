@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Attire() {
     return (
-        <section id="attire" className="mx-auto max-w-3xl px-6 py-24 text-center">
+        <section id="attire" className="mx-auto max-w-3xl px-6 py-12 text-center">
             <SectionHeading eyebrow="What to Wear" title={attire.formality} />
             <p className="mx-auto mt-6 max-w-xl font-body text-sm leading-relaxed text-ink-soft">
                 {attire.notes}

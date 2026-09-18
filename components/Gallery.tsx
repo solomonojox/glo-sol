@@ -45,7 +45,7 @@ export default function Gallery() {
     const activePhoto = activeIndex !== null ? gallery[activeIndex] : null;
 
     return (
-        <section id="gallery" className="mx-auto max-w-5xl px-6 py-24">
+        <section id="gallery" className="mx-auto max-w-5xl px-6 py-12">
             <SectionHeading eyebrow="Before the Big Day" title="Pre-wedding photos" />
             <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {gallery.map((photo, i) => (

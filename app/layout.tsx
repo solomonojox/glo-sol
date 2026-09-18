@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { wedding } from "@/lib/wedding-data";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${inter.variable} font-body bg-paper text-ink antialiased`}>
+        <BackgroundMusic />
         {children}
       </body>
     </html>

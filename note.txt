@@ -1,0 +1,12 @@
+For the creeate guest athe th backend, can we prevent multiple creating, maybe using name and phone number as ref?
+async createGuest(dto: CreateGuestDto): Promise<GuestDocument> {
+    return this.guestModel.create({ ...dto, status: GuestStatus.PENDING });
+  }
+@Post('rsvp')
+  async submitRsvp(@Body() dto: CreateGuestDto) {
+    const guest = await this.weddingService.createGuest(dto);
+    return {
+      message: 'RSVP received. You will be notified once approved.',
+      guest,
+    };
+  }

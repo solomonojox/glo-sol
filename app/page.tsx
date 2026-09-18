@@ -8,16 +8,18 @@ import FAQ from "@/components/FAQ";
 import GiftSection from "@/components/GiftSection";
 import FloatingGiftButton from "@/components/FloatingGiftButton";
 import Footer from "@/components/Footer";
-import BackgroundMusic from "@/components/BackgroundMusic";
+// import BackgroundMusic from "@/components/BackgroundMusic";
+import Attending from "@/components/Attending";
 
 export default function Home() {
   return (
     <>
-      <BackgroundMusic />
+      {/* <BackgroundMusic /> */}
       <Nav />
       <main>
         <Hero />
         <OurStory />
+        <Attending />
         <Schedule />
         <Attire />
         <Gallery />
