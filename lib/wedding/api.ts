@@ -63,6 +63,10 @@ export function fetchGuests(status?: GuestStatus) {
   return request<Guest[]>(`/api/wedding/guests${qs}`);
 }
 
+export function fetchRemainingGuests() {
+  return request<number>(`/api/wedding/guests/all`)
+}
+
 export function approveGuest(id: string) {
   return request<Guest>(`/api/wedding/guests/${id}/approve`, { method: 'PATCH' });
 }

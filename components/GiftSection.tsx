@@ -18,7 +18,7 @@ export default function GiftSection() {
     };
 
     const bankDetails2 = {
-        accountName: "Glory Ene Oklenyi",
+        accountName: "Glory Ene Okelenyi",
         bankName: "Opay",
         accountNumber: "8142927276",
         routingNumber: "021000021",

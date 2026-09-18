@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
-import { submitRsvp } from '@/lib/wedding/api';
+import { useState, FormEvent, useCallback, useEffect } from 'react';
+import { submitRsvp, fetchRemainingGuests } from '@/lib/wedding/api';
 import { WeddingSide, CreateGuestInput } from '@/lib/wedding/types';
 import { weddingFontVars } from '@/lib/wedding/fonts';
 import Link from 'next/link';
@@ -21,6 +21,9 @@ export default function RsvpFormPage() {
   const [hasKids, setHasKids] = useState<boolean | null>(null);
   const [view, setView] = useState<ViewState>('form');
   const [error, setError] = useState('');
+  // const [countError, setCountError] = useState('');
+  const [count, setCount] = useState<number | null>(null)
+
 
   const isValid = fullName.trim().length > 0 && phoneNumber.trim().length > 0 && side && hasKids !== null;
 
@@ -42,6 +45,28 @@ export default function RsvpFormPage() {
     }
   }
 
+  const load = useCallback(async () => {
+    // setCountError('');
+    try {
+      const data = await fetchRemainingGuests();
+      console.log(data)
+      setCount(data);
+    } catch (err) {
+      console.log(err)
+      // setCountError(`-`);
+    }
+  }, []);
+
+  useEffect(() => {
+    // No client-side session check needed — middleware.ts already redirects
+    // unauthenticated requests to /login before this page ever renders.
+    const timer = setTimeout(() => {
+      void load();
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [load]);
+
   return (
     <div className={`${weddingFontVars} min-h-screen bg-[#FBF7EF] flex items-center justify-center px-4 py-16`}>
       <div className="w-full max-w-md">
@@ -60,9 +85,14 @@ export default function RsvpFormPage() {
               >
                 Glory &amp; Solomon
               </h1>
-              <p className="text-center text-sm text-[#6B6B6B] mb-8">
+              <p className="text-center text-sm text-[#6B6B6B] mb-2">
                 Let us know you&apos;re coming - it takes a minute.
               </p>
+
+              <div className='flex items-center justify-center mb-8 gap-2'>
+                {/* <p className='rounded-full p-2 border-[#D4A017] border shrink-0 h-6 w-6 flex items-center justify-center font-bold'>2</p> */}
+                <p>(<span className='font-semibold text-[#D4A017]'>{count ?? '—'}</span> guest remaining)</p>
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <Field label="Full name">
@@ -95,8 +125,8 @@ export default function RsvpFormPage() {
                         type="button"
                         onClick={() => setSide(opt.value)}
                         className={`py-2.5 px-2 rounded-lg text-sm font-medium border transition-colors ${side === opt.value
-                            ? 'bg-[#2B2118] text-white border-[#2B2118]'
-                            : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
+                          ? 'bg-[#2B2118] text-white border-[#2B2118]'
+                          : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
                           }`}
                       >
                         {opt.label}
@@ -111,8 +141,8 @@ export default function RsvpFormPage() {
                       type="button"
                       onClick={() => setHasKids(true)}
                       className={`py-2.5 rounded-lg text-sm font-medium border transition-colors ${hasKids === true
-                          ? 'bg-[#2B2118] text-white border-[#2B2118]'
-                          : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
+                        ? 'bg-[#2B2118] text-white border-[#2B2118]'
+                        : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
                         }`}
                     >
                       Yes
@@ -121,8 +151,8 @@ export default function RsvpFormPage() {
                       type="button"
                       onClick={() => setHasKids(false)}
                       className={`py-2.5 rounded-lg text-sm font-medium border transition-colors ${hasKids === false
-                          ? 'bg-[#2B2118] text-white border-[#2B2118]'
-                          : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
+                        ? 'bg-[#2B2118] text-white border-[#2B2118]'
+                        : 'bg-white text-[#4a4a4a] border-[#E4DFD3] hover:border-[#B8860B]'
                         }`}
                     >
                       No
