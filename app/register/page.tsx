@@ -49,8 +49,8 @@ export default function RsvpFormPage() {
     // setCountError('');
     try {
       const data = await fetchRemainingGuests();
-      console.log(data)
-      setCount(data);
+      const remaining = 75 - data
+      setCount(remaining);
     } catch (err) {
       console.log(err)
       // setCountError(`-`);
