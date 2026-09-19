@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { approveGuest, downloadAccessCard, fetchGuests, logout, rejectGuest } from '@/lib/wedding/api';
+import { approveGuest, downloadAccessCard, fetchGuests, fetchGuestStats, logout, rejectGuest } from '@/lib/wedding/api';
 import { Guest, GuestStatus, WeddingSide } from '@/lib/wedding/types';
 import { weddingFontVars } from '@/lib/wedding/fonts';
 
@@ -22,6 +22,9 @@ const SIDE_LABEL: Record<WeddingSide, string> = {
 export default function DashboardPage() {
   const router = useRouter();
   const [guests, setGuests] = useState<Guest[]>([]);
+  const [stats, setStats] = useState<{ total: number; groomSide: number; brideSide: number, bothSide: number }>(
+    { total: 0, groomSide: 0, brideSide: 0, bothSide: 0, }
+  )
   const [tab, setTab] = useState<GuestStatus | 'all'>('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -32,8 +35,14 @@ export default function DashboardPage() {
     setLoading(true);
     setError('');
     try {
-      const data = await fetchGuests(tab === 'all' ? undefined : tab);
+      const [data, { total, groomSide, brideSide, bothSide }] = await Promise.all([
+        fetchGuests(tab === 'all' ? undefined : tab),
+        fetchGuestStats()
+      ]);
+
       setGuests(data);
+      setStats({ total, groomSide, brideSide, bothSide })
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load guests.');
     } finally {
@@ -138,6 +147,12 @@ export default function DashboardPage() {
           </p>
         )}
 
+        <div className='flex justify-end gap-2 lg:gap-4 items-center bg-white p-2'>
+          <p className='font-semibold text-sm'>Total Guests: {stats.total ? stats.total : '—'}</p>
+          <p className='font-semibold text-sm'>Groom: {stats.groomSide ? stats.groomSide : '—'}</p>
+          <p className='font-semibold text-sm'>Bride: {stats.brideSide ? stats.brideSide : '—'}</p>
+          <p className='font-semibold text-sm'>Both: {stats.bothSide ? stats.bothSide : '—'}</p>
+        </div>
         <div className="bg-white rounded-xl border border-[#E4DFD3] overflow-hidden">
           {loading ? (
             <p className="px-6 py-10 text-center text-sm text-[#6B6B6B]">Loading guests…</p>

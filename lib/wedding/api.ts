@@ -67,6 +67,10 @@ export function fetchRemainingGuests() {
   return request<number>(`/api/wedding/guests/all`)
 }
 
+export function fetchGuestStats() {
+  return request<{ total: number; groomSide: number; brideSide: number, bothSide: number }>(`/api/wedding/stats`)
+}
+
 export function approveGuest(id: string) {
   return request<Guest>(`/api/wedding/guests/${id}/approve`, { method: 'PATCH' });
 }
