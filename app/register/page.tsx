@@ -9,7 +9,7 @@ import Link from 'next/link';
 const SIDE_OPTIONS: { value: WeddingSide; label: string }[] = [
   { value: WeddingSide.BRIDE, label: "Bride's side" },
   { value: WeddingSide.GROOM, label: "Groom's side" },
-  { value: WeddingSide.BOTH, label: 'Both' },
+  // { value: WeddingSide.BOTH, label: 'Both' },
 ];
 
 type ViewState = 'form' | 'submitting' | 'success' | 'error';
@@ -135,7 +135,7 @@ export default function RsvpFormPage() {
                   </div>
                 </Field>
 
-                <Field label="Bringing kids?">
+                <Field label="Bringing kids? (Max of 2 kids)">
                   <div className="grid grid-cols-2 gap-2">
                     <button
                       type="button"

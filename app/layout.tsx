@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${inter.variable} font-body bg-paper text-ink antialiased`}>
-        <BackgroundMusic />
+        {/* <BackgroundMusic /> */}
         {children}
       </body>
     </html>
