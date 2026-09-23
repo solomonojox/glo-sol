@@ -13,8 +13,7 @@ const Attending = () => {
             </h2>
 
             <p className="text-[#6B6B6B] text-sm leading-relaxed max-w-md mx-auto mb-4">
-                This event is strictly based on invitation. We&apos;d love to know you&apos;re coming - it takes less than a minute, and we&apos;ll have your
-                seat, and your dance moves, accounted for.
+                We’d love to know you’re coming! It takes less than a minute, and it helps us plan for the number of guests we’ll be celebrating with. We’ll have your seat, and your dance moves, accounted for.
             </p>
 
             <Link
